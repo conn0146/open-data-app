@@ -1,5 +1,8 @@
 <?php
 
+require_once 'includes/filter-wrapper.php';
+require_once 'includes/db.php';
+
 $errors = array();
 
 $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
