@@ -11,7 +11,7 @@ if (empty($id)) {
 }
 
 $sql = $db->prepare('
-	SELECT id, name, longitude, latitude, address 
+	SELECT id, name, longitude, latitude
 	FROM hills
 	Where id = :id
 ');
@@ -41,7 +41,6 @@ if (empty($results)) {
 	<h1><?php echo $results['name']; ?></h1>
     <p>Longitude <?php echo $results['longitude']; ?></p>
 		<p>Latitude<?php echo $results['latitude']; ?></p>
-		<p>Address<?php echo $results['address']; ?></p>
 
 </body>
 </html>

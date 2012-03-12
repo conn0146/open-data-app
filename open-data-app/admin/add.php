@@ -8,7 +8,6 @@ $errors = array();
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $longitude = filter_input(INPUT_POST, 'longitude', FILTER_SANITIZE_STRING);
 $latitude = filter_input(INPUT_POST, 'latitude', FILTER_SANITIZE_STRING);
-$address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($name)) {
@@ -22,21 +21,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($latitude)) {
 		$errors['latitude'] = true;
 	}
-	
-	if (empty($address)) {
-		$errors['address'] = true;
-	}
 
 	if (empty($errors)) {
 
 		$sql = $db->prepare('
-			INSERT INTO hills (name, longitude, latitude, address)
-			VALUES (:name, :longitude, latitude, address)
+			INSERT INTO hills (name, longitude, latitude)
+			VALUES (:name, :longitude, :latitude)
 		');
 		$sql->bindValue(':name', $name, PDO::PARAM_STR);
 		$sql->bindValue(':longitude', $longitude, PDO::PARAM_STR);
 		$sql->bindValue(':latitude', $latitude, PDO::PARAM_STR);
-		$sql->bindValue(':address', $address, PDO::PARAM_STR);
 		$sql->execute();
 
 		header('Location: index.php');
@@ -64,10 +58,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<div>
 			<label for="latitude">Latitude<?php if (isset($errors['latitude'])) : ?> <strong>is required</strong><?php endif; ?></label>
 			<input id="latitude" name="latitude" value="<?php echo $latitude; ?>" required>
-		</div>
-		<div>
-			<label for="address">Address<?php if (isset($errors['address'])) : ?> <strong>is required</strong><?php endif; ?></label>
-			<input id="address" name="address" value="<?php echo $address; ?>" required>
 		</div>
 		<button type="submit">Add</button>
 	</form>

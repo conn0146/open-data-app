@@ -15,7 +15,6 @@ if (empty($id)) {
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
 $longitude = filter_input(INPUT_POST, 'longitude', FILTER_SANITIZE_STRING);
 $latitude = filter_input(INPUT_POST, 'latitude', FILTER_SANITIZE_STRING);
-$address = filter_input(INPUT_POST, 'address', FILTER_SANITIZE_STRING);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($name)) {
@@ -29,21 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (empty($latitude)) {
 		$errors['latitude'] = true;
 	}
-	
-	if (empty($address)) {
-		$errors['address'] = true;
-	}
 
 	if (empty($errors)) {
 		$sql = $db->prepare('
 			UPDATE hills
-			SET name = :name, longitude = :longitude, latitude = :latitude, address = :address
+			SET name = :name, longitude = :longitude, latitude = :latitude
 			WHERE id = :id
 		');
 		$sql->bindValue(':name', $name, PDO::PARAM_STR);
 		$sql->bindValue(':longitude', $longitude, PDO::PARAM_STR);
 		$sql->bindValue(':latitude', $latitude, PDO::PARAM_STR);
-		$sql->bindValue(':address', $latitude, PDO::PARAM_STR);
 		$sql->bindValue(':id', $id, PDO::PARAM_INT);
 		$sql->execute();
 
@@ -52,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	}
 } else {
 	$sql = $db->prepare('
-		SELECT id, name, longitude, latitude, address
+		SELECT id, name, longitude, latitude
 		FROM hills
 		WHERE id = :id
 	');
@@ -63,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$name = $results['name'];
 	$longitude = $results['longitude'];
 	$latitude = $results['latitude'];
-	$address = $results['address'];
 }
 
 ?><!DOCTYPE HTML>
@@ -86,10 +79,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		<div>
 			<label for="latitude">Director<?php if (isset($errors['latitude'])) : ?> <strong>is required</strong><?php endif; ?></label>
 			<input id="latitude" name="latitude" value="<?php echo $latitude; ?>" required>
-		</div>
-		<div>
-			<label for="address">Address<?php if (isset($errors['address'])) : ?> <strong>is required</strong><?php endif; ?></label>
-			<input id="address" name="address" value="<?php echo $address; ?>" required>
 		</div>
 		<button type="submit">Save</button>
 	</form>

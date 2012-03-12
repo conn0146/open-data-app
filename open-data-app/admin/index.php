@@ -4,7 +4,7 @@ require_once 'includes/filter-wrapper.php';
 require_once 'includes/db.php';
 
 $results = $db->query('
-SELECT id, name, longitude, latitude, address 
+SELECT id, name, longitude, latitude
 FROM hills
 ORDER BY name ASC
 ')
