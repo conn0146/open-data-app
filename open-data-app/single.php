@@ -30,17 +30,15 @@ if (empty($results)) {
 	exit;
 }
 
-?><!DOCTYPE HTML>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title><?php echo $results['name']; ?> &middot; Ottawa Sledding Hills &middot; 2010</title>
-</head>
-<body>
+include 'includes/theme-top.php';
+?>
 
-	<h1><?php echo $results['name']; ?></h1>
-    <p>Longitude <?php echo $results['longitude']; ?></p>
-		<p>Latitude<?php echo $results['latitude']; ?></p>
+<h1><?php echo $results['name']; ?></h1>
+<p>Longitude <?php echo $results['longitude']; ?></p>
+<p>Latitude<?php echo $results['latitude']; ?></p>
 
-</body>
-</html>
+<?php
+
+include 'includes/theme-bottom.php';
+
+?>
