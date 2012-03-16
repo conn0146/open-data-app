@@ -23,7 +23,7 @@ include 'includes/theme-top.php';
 		<a href="single.php?id=<?php echo $hills['id']; ?>" itemprop="name"><?php echo $hills['name']; ?></a>
 		<span itemprop="geo" itemscope itemtype="http://schema.org/GeoCoordinates">
 			<meta itemprop="latitude" content="<?php echo $hills['latitude']; ?>">
-			<meta itemprop="longitude" content="<?php echo $dino['longitude']; ?>">
+			<meta itemprop="longitude" content="<?php echo $hills['longitude']; ?>">
 		</span>
 	</li>
 <?php endforeach; ?>
