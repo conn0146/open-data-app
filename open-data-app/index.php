@@ -12,15 +12,16 @@ ORDER BY name ASC
 include 'includes/theme-top.php';
 
 ?>
+
+<h1>Ottawa Sledding Hills (2010)</h1>
+
+<a href="admin/index.php">Admin Login</a>
+
 <button id="geo">Find Me</button>
 <form id="geo-form">
 	<label for="adr">Address</label>
 	<input id="adr">
 </form>
-
-<h1>Ottawa Sledding Hills (2010)</h1>
-	
-<a href="admin/index.php">Admin Login</a>
 	
 <ol class="hills">
 <?php foreach ($results as $hills) : ?>
