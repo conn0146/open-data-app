@@ -1,5 +1,14 @@
 <?php
-
+/**
+ * Displays the list and map for the Open Data Set
+ *
+ * @package Ottawa Sledding Hills (2010)
+ * @copyright 2012 Jason Connell
+ * @author Jason Connell <connell.connect@gmail.com>
+ * @link https://github.com/conn0146/open-data-app
+ * @license New BSD License
+ *@version 1.0.0
+ */
 require_once 'includes/filter-wrapper.php';
 require_once 'includes/db.php';
 
