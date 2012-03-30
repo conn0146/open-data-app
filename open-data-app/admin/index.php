@@ -1,10 +1,16 @@
 <?php
 
+require_once '../includes/users.php';
+
+if (! user_is_signed_in()) {
+	header('Location: sign-in.php');
+}
+
 require_once 'includes/filter-wrapper.php';
 require_once 'includes/db.php';
 
 $results = $db->query('
-SELECT id, name, longitude, latitude
+SELECT id, name, longitude, latitude, rating
 FROM hills
 ORDER BY name ASC
 ')
@@ -19,6 +25,7 @@ ORDER BY name ASC
 <body>
 	<h1>Admin Page</h1>
 	
+	<a href="sign-out.php">Sign Out</a>
 	<a href="../index.php">Back to Main Page</a>
 	<a href="add.php">Add a Hill</a>
 	
