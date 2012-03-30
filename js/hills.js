@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 	var infoWindow;
 
-	$('.hills li').each(function (i, elem) {
+	$('.hills > li').each(function (i, elem) {
 		var hill = $(this).find('a').html();
 
 		var info = '<div class="info-window">'
