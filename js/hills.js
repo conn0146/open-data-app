@@ -31,6 +31,12 @@ $(document).ready(function () {
 			, icon : 'images/snow.png'
 			, animation: google.maps.Animation.DROP
 		});
+		
+		locations.push({
+		id : $(this).attr('data-id')
+		, lat : lat
+		, lng : lng
+		});
 
 		function showInfoWindow (ev) {
 			if (ev.preventDefault) {
