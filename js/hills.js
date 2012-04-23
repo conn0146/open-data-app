@@ -17,6 +17,7 @@ $(document).ready(function () {
 
 		var info = '<div class="info-window">'
 			+ '<strong>' + hill + '</strong>'
+			+ '<a href="single.php?id=' + $(this).attr('data-id') + '">Rate or Comment!</a>'
 			+ '</div>'
 		;
 

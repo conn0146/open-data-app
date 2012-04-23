@@ -28,6 +28,8 @@ if (empty($results)) {
 	exit;
 }
 
+$cookie = get_rate_cookie();
+
 include 'includes/theme-top.php';
 ?>
 
@@ -60,6 +62,7 @@ include 'includes/theme-top.php';
 		<li class="rater-level"><a href="rate.php?id=<?php echo $results['id']; ?>&rate=<?php echo $i; ?>">★</a></li>
 		<?php endfor; ?>
 	</ol>
+    
 
 	<?php endif; ?>
 </div>
