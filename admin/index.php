@@ -6,7 +6,6 @@ if (! user_is_signed_in()) {
 	header('Location: sign-in.php');
 }
 
-require_once 'includes/filter-wrapper.php';
 require_once 'includes/db.php';
 
 $results = $db->query('

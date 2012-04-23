@@ -1,4 +1,3 @@
-
 <?php
 /**
  * Displays the list and map for the Open Data Set
