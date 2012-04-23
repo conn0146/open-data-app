@@ -25,7 +25,7 @@ body{
 }
 
 #map {
-	margin: 0px 0px 0px 20px;
+	margin: 430px 0px 0px 20px;
 	top: 35px;
 	width: 530px;
 	height:430px;
@@ -71,7 +71,7 @@ h1{
 }
 
 .hills{
-	margin:10px 20px 0 0;
+	margin:430px 20px 0 0;
 	height:410px;
 	width:380px;
 	padding: 10px;
