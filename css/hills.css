@@ -48,7 +48,7 @@ body{
 }
 
 .sin1 a,
-.sin1 a:link,{
+a:link, a:visited{
 	text-decoration:none;
 	color:#0e76bd;
 }
