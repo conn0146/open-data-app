@@ -33,9 +33,13 @@ body{
 	
 	position: absolute;
 	
-	box-shadow: 0px 0px 5px 5px #999;
-	-webkit-box-shadow: 0px 0px 5px 5px #999;
-  	-moz-box-shadow: 0px 0px 5px 5px #999;
+	border-style:solid;
+	border-radius: 15px;
+	border-color:#0e76bd;
+
+
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 }
 
 .sin1 {
@@ -84,7 +88,13 @@ h1{
 	float: right;
 	display: inline;
 	
-	box-shadow: 0px 0px 5px 5px #999;
+	border-style:solid;
+	border-radius: 15px;
+	border-color:#0e76bd;
+
+
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
 	
 	overflow-y:scroll;
 	
