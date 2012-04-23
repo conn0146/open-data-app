@@ -6,7 +6,7 @@ if (! user_is_signed_in()) {
 	header('Location: sign-in.php');
 }
 
-require_once 'includes/db.php';
+require_once '../includes/db.php';
 
 $results = $db->query('
 SELECT id, name, longitude, latitude, rating
