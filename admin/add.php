@@ -3,6 +3,10 @@
 require_once '../includes/filter-wrapper.php';
 require_once '../includes/db.php';
 
+if (! user_is_signed_in()) {
+	header('Location: sign-in.php');
+}
+
 $errors = array();
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
