@@ -15,7 +15,9 @@ body{
 	background-repeat: no-repeat;
 	
 	-webkit-border-radius: 15px;
+	-webkit-border-color:#0e76bd;
 	-moz-border-radius: 15px;
+	-moz-border-color:#0e76bd;
 	border-radius: 15px;
 	border-color:#0e76bd;
 }
