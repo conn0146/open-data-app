@@ -1,3 +1,28 @@
+html{
+	margin:0;
+	padding:20px;	
+	
+	background:#FFF;
+}
+
+body{
+	margin:6em auto;
+	
+	width:1000px;
+	height:800px;
+	
+	background-image:url(../images/background.png);
+	background-repeat: no-repeat;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+	-webkit-box-shadow: 0px 0px 5px 5px #F90;
+	-moz-box-shadow: 0px 0px 5px 5px #F90;
+	box-shadow: 0px 0px 5px 5px #F90;
+}
+
 #map {
 	margin: 430px 0px 0px 20px;
 	top: 35px;
