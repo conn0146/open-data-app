@@ -39,23 +39,23 @@ body{
 }
 
 #geo{
-	margin:350px 0 0 30px;
+	margin:150px 0 0 30px;
 }
 
 #geo-form{
-	margin: 350px 0 0 30px;
+	margin: 150px 0 0 30px;
 	width:300px;
 	display: inline-block;	
 }
 
 #adr{
-	margin: 350px 0 0 0;
+	margin: 150px 0 0 0;
 	width:150px;
 	display: inline-block;	
 }
 
 #adr1{
-	margin: 350px 0 0 0;
+	margin: 150px 0 0 0;
 	width:70px;
 	display: inline-block;	
 }
