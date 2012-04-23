@@ -47,6 +47,12 @@ body{
 	margin: 0 0 0 20px;
 }
 
+.sin1 a,
+.sin1 a:link,{
+	text-decoration:none;
+	color:#0e76bd;
+}
+
 #geo{
 	margin:100px 0 0 30px;
 }
