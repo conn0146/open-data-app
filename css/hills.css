@@ -14,15 +14,14 @@ body{
 	background-image:url(../images/background.png);
 	background-repeat: no-repeat;
 	
-	-webkit-border-style:solid;
-	-webkit-border-radius: 15px;
-	-webkit-border-color:#0e76bd;
-	-moz-border-style:solid;
-	-moz-border-radius: 15px;
-	-moz-border-color:#0e76bd;
 	border-style:solid;
 	border-radius: 15px;
 	border-color:#0e76bd;
+
+
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+
 }
 
 #map {
