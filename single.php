@@ -67,6 +67,8 @@ include 'includes/theme-top.php';
 	<?php endif; ?>
 </div>
 
+<a href="index.php" alt="Home">Home</a>
+
 <?php
 
 include 'includes/theme-bottom.php';
