@@ -1,0 +1,437 @@
+@charset "utf-8";
+/* CSS Document */
+
+html{
+	margin:0;
+	padding:20px;	
+	
+	background:#000;
+}
+
+body{
+	margin:6em auto;
+	
+	width:1000px;
+	height:800px;
+	
+	background-image:url(../images/background.png);
+	 background-repeat: no-repeat;
+	
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+	
+	-webkit-box-shadow: 0px 0px 5px 5px #F90;
+	-moz-box-shadow: 0px 0px 5px 5px #F90;
+	box-shadow: 0px 0px 5px 5px #F90;
+
+}
+
+#geo{
+	margin:5px 0 0 30px;
+}
+
+#geo-form{
+	margin: 0 0 0 30px;
+	width:300px;
+	display: inline-block;	
+}
+
+#adr{
+	width:150px;
+	display: inline-block;	
+}
+
+#adr1{
+	width:70px;
+	display: inline-block;	
+}
+
+div{
+	margin:0;
+	padding:0;
+	
+}
+
+figure{
+	margin-top:-60px;
+	padding:0;
+}
+
+
+#map {
+	margin: 430px 0px 0px 20px;
+	top: 35px;
+	width: 530px;
+	height:430px;
+	bottom: 0px;
+	
+	position: absolute;
+	
+	box-shadow: 0px 0px 5px 5px #999;
+	-webkit-box-shadow: 0px 0px 5px 5px #999;
+  -moz-box-shadow: 0px 0px 5px 5px #999;
+	
+}
+
+h1{
+	width:40%;
+	margin:0 0 0 40px;
+	padding:0px;
+	
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:46px;
+	color:#039;
+	
+	text-align:center;
+}
+
+.hills{
+	margin:10px 20px 0 0;
+	height:410px;
+	width:380px;
+	padding: 10px;
+	
+	float: right;
+	display: inline;
+	
+	box-shadow: 0px 0px 5px 5px #999;
+	
+	overflow-y:scroll;
+	
+	list-style-type: none;
+}
+
+
+.distance a{
+	padding:10px 0 10px 0;
+	
+	color:#309; /*dark blue*/
+	text-decoration:none;
+	
+}
+
+
+.hills li {
+	cursor: pointer;
+}
+
+.hills > li {
+	margin-bottom:10px;
+	
+	background-color:rgba(255,255,255,.3);	
+}
+
+.box{
+    margin:0;
+	padding:10px 0 10px 0;
+	
+	background-color: rgba(153,102,153,.3);
+}
+
+
+/*.museums a, .museums a:link, .museums a:visited {
+    border: 1px solid #FFFFFF;
+    border-radius: 8px 8px 8px 8px;
+    color: #38452E;
+    display: inline;
+    margin: 0;
+    overflow: hidden;
+   padding: 0.4em .8em 0.4em 4.8em;
+   text-decoration: none;
+    text-shadow: 1px 1px 1px #FFFFFF;
+}*/
+
+ .hills li:hover{
+	background-color:rgba(0,51,255,.3);
+	
+}
+
+.hills a,
+.hills a:link,{
+	padding:10px;
+    color: #66C; /*blue*/
+	line-height:50;
+}
+
+
+.hills li meter {
+	display: inline-block;
+	
+	height: 0;
+	margin: 0;
+	padding: 0;
+	width: 0;
+
+	-webkit-appearance: none;
+	appearance: none;
+}
+
+.rater {
+	margin: 0;
+	padding: 0;
+	
+	display: inline-block;
+	/*vertical-align: middle;*/
+
+	list-style-type: none;
+	line-height: 1;
+}
+
+.rater-level {
+	float: left;
+    /*background-color:#FFF;*/
+	color: #efecd2;
+}
+
+.rater-level a,
+.rater-level a:link,
+.rater-level a:visited {
+	color: #efecd2;
+	/*color:#3F0;*/
+	text-decoration: none
+}
+
+.rater-level li{
+ background:transparent;	
+}
+
+.rater-level a:hover,
+.rater-level a:focus,
+.rater-level a:active,
+.is-rated,
+.is-rated a,
+.is-rated a:link,
+.is-rated a:visited,
+.is-rated a:hover,
+.is-rated a:focus,
+.is-rated a:active,
+.is-rated-hover a,
+.is-rated-hover a:link,
+.is-rated-hover a:visited {
+	color: #ffe91f;
+}
+
+/*.info-window strong {
+	display: block;
+}
+*/
+
+.hills li meter {
+	margin: 0;
+    padding: 1em;
+    width: 0;
+	height: 0;
+	
+    display: inline;
+    display: inline;
+    
+}
+/*----------------single.php---------------------*/
+h2{
+	width:70%;
+	margin:10px 0 0px 250px;
+	padding:0;
+	
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:26px;
+	color:#039;
+	text-decoration:underline;
+}
+
+h3{
+	padding:0;
+	margin:0;
+	width:70%;
+	
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:20px;
+	color:#039;
+	
+	text-align:center;
+	
+	text-decoration:underline;
+}	
+
+
+.ratedeco{
+	width:500px;
+	height:250px;
+	margin:10px 0 0 230px;
+	padding:10px;
+	
+	font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font:#fff;
+	
+	line-height: 2;
+	
+	box-shadow: 0px 0px 5px 5px #999;
+	-webkit-box-shadow: 0px 0px 5px 5px #999;
+	-moz-box-shadow: 0px 0px 5px 5px #999;
+	
+}
+
+dl{
+	padding-top:10px;
+}
+
+
+#address1{
+	 float:left;
+	 width:100%;
+	 
+	 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ 
+#address{
+	 float:left;
+	 width:30%;
+	 
+	 font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+ 
+ 
+
+
+.meter {
+	padding:0;
+	margin:0;
+}
+
+.ra{
+	margin-top:10px; 
+	margin-left:230px;
+	margin-right:0;
+	margin-bottom:0;
+	padding:10px;
+	
+	width:500px;
+	height:100px;
+	
+	font-family:"Courier New", Courier, monospace;
+	font:#fff;
+	
+	box-shadow: 0px 0px 5px 5px #999;
+	-webkit-box-shadow: 0px 0px 5px 5px #999;
+	-moz-box-shadow: 0px 0px 5px 5px #999;
+}
+
+/*----------------------------------admin.php-----------------------*/
+.admin-box{
+	margin:20px 0 0 230px;
+	padding:20px;
+	
+	width:500px;
+	height:380px;
+	
+	box-shadow: 0px 0px 5px 5px #999;
+	-webkit-box-shadow: 0px 0px 5px 5px #999;
+	-moz-box-shadow: 0px 0px 5px 5px #999;
+	
+	overflow-y:scroll;
+	position: absolute;
+	
+}
+
+.ul1{
+	margin:20px 0 0 40px;
+	padding:10px;
+	
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	color:#333;
+	
+	list-style: none;
+	text-decoration:none;
+	
+	line-height:2;
+}
+
+.edit-stuff{
+	margin:0 0 0 30px;
+	width:30%;
+}
+
+.edit-stuff a,
+.edit-stuff a:link{
+	color:#fff;
+}
+
+.edit-stuff li:hover{
+	color:#3F3;
+}
+
+.sign{
+	right:0;
+	left: 60px;
+	padding:10px;
+	width:8%;
+	
+	float:right;
+	background-color:#666;
+}
+
+.sin{
+	
+	text-decoration:none;
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	color:#FFF;
+	float:right;
+	padding:10px;
+}
+
+.homy{
+	text-decoration:none;
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	color:#FFF;
+	float:right;
+	padding:10px;
+}
+
+.homy:hover{
+	color:#006;
+}
+
+.sin1{
+	text-decoration:none;
+	font:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size:16px;
+	color:#C60;
+	
+	float:right;
+	padding:10px;
+}
+
+.sin1:hover{
+	color:#006;
+}
+
+.sin:hover{
+	color:#006;
+}
+
+#over1:hover{
+	color:#036;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
