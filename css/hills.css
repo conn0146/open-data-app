@@ -39,23 +39,23 @@ body{
 }
 
 #geo{
-	margin:150px 0 0 30px;
+	margin:100px 0 0 30px;
 }
 
 #geo-form{
-	margin: 150px 0 0 30px;
+	margin: 100px 0 0 30px;
 	width:300px;
 	display: inline-block;	
 }
 
 #adr{
-	margin: 150px 0 0 0;
+	margin: 100px 0 0 0;
 	width:150px;
 	display: inline-block;	
 }
 
 #adr1{
-	margin: 150px 0 0 0;
+	margin: 100px 0 0 0;
 	width:70px;
 	display: inline-block;	
 }
@@ -73,7 +73,7 @@ h1{
 }
 
 .hills{
-	margin:380px 20px 0 0;
+	margin:350px 20px 0 0;
 	height:410px;
 	width:380px;
 	padding: 10px;
